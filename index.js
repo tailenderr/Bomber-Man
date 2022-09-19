@@ -20,7 +20,7 @@ class Particle {
   constructor(x, y) {
     this.x = x;
     this.y = y;
-    this.size = 3;
+    this.size = 2.5;
     this.density = Math.random() * 40 + 5;
     this.baseX = this.x;
     this.baseY = this.y;
@@ -47,11 +47,11 @@ class Particle {
     } else {
       if (this.x !== this.baseX) {
         let dx = this.x - this.baseX;
-        this.x -= dx / 30;
+        this.x -= dx / 40;
       }
       if (this.y !== this.baseY) {
         let dy = this.y - this.baseY;
-        this.y -= dy / 30;
+        this.y -= dy / 40;
       }
     }
   }
@@ -59,11 +59,11 @@ class Particle {
 ctx.fillStyle = "white";
 ctx.font = "20px Verdana";
 ctx.textAlign = "centre";
-ctx.fillText("Bomber-Man", canvas.width / 120, 20);
+ctx.fillText("Bomber-Man", canvas.width / 2000, 20);
 ctx.strokeStyle = "white";
-ctx.strokeRect(0, 0, 200, 200);
+ctx.strokeRect(0, 0, 150, 150);
 
-const textCordinates = ctx.getImageData(0, 0, 240, 240);
+const textCordinates = ctx.getImageData(0, 0, 150, 150);
 
 function init() {
   for (let a = 0, a2 = textCordinates.height; a < a2; a++) {
