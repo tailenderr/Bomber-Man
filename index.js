@@ -20,7 +20,7 @@ class Particle {
   constructor(x, y) {
     this.x = x;
     this.y = y;
-    this.size = 2.5;
+    this.size = 3;
     this.density = Math.random() * 40 + 5;
     this.baseX = this.x;
     this.baseY = this.y;
@@ -59,7 +59,7 @@ class Particle {
 ctx.fillStyle = "white";
 ctx.font = "20px Verdana";
 ctx.textAlign = "centre";
-ctx.fillText("Bomber-Man", canvas.width / 2000, 20);
+ctx.fillText("Bomber-Man", canvas.width / 100, 20);
 ctx.strokeStyle = "white";
 ctx.strokeRect(0, 0, 150, 150);
 
